@@ -4,22 +4,24 @@ public class Ejercicio9 {
 
 	public static void main (String [] args) {
 		
-		divisores(56);
+		divisoresPrimos(42);
 		
 	}
 	
-	public static int divisores(int n) {
-		
+	public static int divisoresPrimos(int n) {
+		//Contador divisores primos
 		int cont = 0;
 		
-		for(int i = 2; i < n-1; i++) {
-			if(n % i == 0) {
-				cont++;
+		for(int i = 2; i < n; i++) {
+			if(Ejercicio7.primo(i) && n % i == 0) {
 				System.out.println(i);
+				cont++;
 			}
 		}
+		System.out.println("Hay " + cont + " divisores primos");
+		
 		return cont;
 	}	
 }
-	
+
 
